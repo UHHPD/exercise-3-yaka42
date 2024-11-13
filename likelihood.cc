@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <cmath>
 
 
 double poisson(double mu, int k) {
@@ -62,12 +63,12 @@ int main() {
             min_mu = i* 0.1;
         }
     }
-    cout << "Mimimum: " << min_mu << endl;
+    //cout << "Mimimum: " << min_mu << endl;
     fout3.close();
 
     for( int i = 0; i < 601; i++){
         if(-2*log(prob(daten, i * 0.01 )/prob(daten, min_mu)) < 1){
-            cout << i*0.01 << endl;
+            //cout << i*0.01 << endl;
         }
     }
 
@@ -92,7 +93,7 @@ int main() {
     }
     fin2.close();
     double variance = variance_helper/ 234;
-    cout << "uncertainty on the sample mean: " << sqrt(variance)/sqrt(234.0) << endl;
+    //cout << "uncertainty on the sample mean: " << sqrt(variance)/sqrt(234.0) << endl;
 
 
     ofstream fout4("lambda.txt");
