@@ -43,13 +43,13 @@ int main() {
 
     ofstream fout("likelihood.txt");
     for( int i = 0; i < 61; i++){
-        fout << i* 0.1 << " : " << prob(daten, i * 0.1 )<< endl;
+        fout << i* 0.1 << " " << prob(daten, i * 0.1 )<< endl;
     }
     fout.close();
 
     ofstream fout2("nll.txt");
     for( int i = 0; i < 61; i++){
-        fout2 << i* 0.1 << " : " << -2*log(prob(daten, i * 0.1 ))<< endl;
+        fout2 << i* 0.1 << " " << -2*log(prob(daten, i * 0.1 ))<< endl;
     }
     fout2.close();
 
@@ -57,7 +57,7 @@ int main() {
     double min = 10000.0;
     double min_mu; 
     for( int i = 0; i < 61; i++){
-        fout3 << i* 0.1 << " : " << -2*log(prob(daten, i * 0.1 )) + 2*log(prob(daten, 3.11538)) << endl;
+        fout3 << i* 0.1 << " " << -2*log(prob(daten, i * 0.1 )) + 2*log(prob(daten, 3.11538)) << endl;
         if(min > -2*log(prob(daten, i * 0.1 )) + 2*log(prob(daten, 3.11538))){
             min = -2*log(prob(daten, i * 0.1 )) + 2*log(prob(daten, 3.11538));
             min_mu = i* 0.1;
@@ -98,13 +98,13 @@ int main() {
 
     ofstream fout4("lambda.txt");
     for( int i = 0; i < 61; i++){
-        fout4 << i* 0.1 << " : " << -2*log(prob(daten, i * 0.1 )/prob2(daten))<< endl;
+        fout4 << i* 0.1 << " " << -2*log(prob(daten, i * 0.1 )/prob2(daten))<< endl;
     }
     fout4.close();
 
     ofstream fout5("Abweichung.txt");
     for( int i = 0; i < 61; i++){
-        fout5 << i* 0.1 << " : " << (-2*log(prob(daten, i * 0.1 )/prob2(daten)) - 233)/ sqrt(233)<< endl;
+        fout5 << i* 0.1 << " " << (-2*log(prob(daten, i * 0.1 )/prob2(daten)) - 233)/ sqrt(233)<< endl;
     }
     fout5.close();
 }
