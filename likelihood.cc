@@ -102,9 +102,6 @@ int main() {
     }
     fout4.close();
 
-    ofstream fout5("Abweichung.txt");
-    for( int i = 0; i < 61; i++){
-        fout5 << i* 0.1 << " " << (-2*log(prob(daten, i * 0.1 )/prob2(daten)) - 233)/ sqrt(233)<< endl;
-    }
-    fout5.close();
+     cout << (-2*log(prob(daten,  3.11538 )/prob2(daten)) - 233)/ sqrt(233)<< endl;
+
 }
