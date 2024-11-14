@@ -102,6 +102,6 @@ int main() {
     }
     fout4.close();
 
-     cout << (-2*log(prob(daten,  3.11538 )/prob2(daten)) - 233)/ sqrt(233)<< endl;
+     cout << (-2*log(prob(daten,  3.11538 )/prob2(daten)) - 233)/ sqrt(2*233)<< endl;
 
 }
