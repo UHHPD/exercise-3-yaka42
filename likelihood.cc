@@ -97,10 +97,8 @@ int main() {
 
 
     ofstream fout4("lambda.txt");
-    for( int i = 0; i < 61; i++){
-        fout4 << i* 0.1 << " " << -2*log(prob(daten, i * 0.1 )/prob2(daten))<< endl;
-    }
-    fout4.close();
+    cout << -2*log(prob(daten, 3.11538 )/prob2(daten))<< endl;
+    
 
      cout << (-2*log(prob(daten,  3.11538 )/prob2(daten)) - 233)/ sqrt(2*233)<< endl;
 
